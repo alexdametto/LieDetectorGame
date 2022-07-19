@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecapSingleRoundActivity"
+    android:orientation="vertical"
+    android:background="@color/mainColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:layout_weight="0"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/back"
+                app:iconGravity="textStart"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/colorPrimary"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white" />
+
+            <TextView
+                android:id="@+id/titleActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="@dimen/big_text_size"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:shadowColor="@color/black"
+                android:text="@string/hai_indovinato"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8">
+            </TextView>
+
+            <Button
+                android:id="@+id/reportButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:backgroundTint="@color/red"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/alert"
+                app:iconGravity="textStart"
+                app:iconTint="@null"
+                app:iconPadding="0dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/infoVideo"
+            android:text="@string/info_video">
+        </TextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:id="@+id/parentView"
+        android:orientation="vertical">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/videoView"
+            app:show_buffering="true"
+            app:controller_layout_id="@layout/custom_exo_controller">
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="180dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp">
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yesButton"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/def_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/def_margin"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/oleo_script"
+            android:text="@string/confirm"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textSize="20dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/noButton"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/def_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/slackey"
+            android:text="@string/report">
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>

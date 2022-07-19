@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+var auth_1 = require("../services/auth");
+var express = require("express");
+var router = express.Router();
+exports.router = router;
+var reportModel = require("../models/report");
+var error_string = require("../error_string");
+var _a = require("../services/report"), getReports = _a.getReports, createReport = _a.createReport, closeReport = _a.closeReport, getReport = _a.getReport, getReportsByUser = _a.getReportsByUser, createVideoReport = _a.createVideoReport;
+router.post("/close/:id", auth_1.isAdmin(), closeReport);
+router.post("/video/:id_game/:id_reported/:id_video", createVideoReport);
+router.post("/:id_game/:id_reported", createReport);
+router.get("/", getReports);
+router.get("/:id", getReport);
+router.get("/user/:id", getReportsByUser);

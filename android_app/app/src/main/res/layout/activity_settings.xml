@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:orientation="vertical"
+    android:background="@color/mainColor">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:elevation="5.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:layout_weight="0"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textSize="@dimen/big_text_size"
+                    android:fontFamily="@font/aldrich"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginRight="@dimen/small_margin">
+
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="invisible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/titleActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="@dimen/big_text_size"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:text="@string/impostazioni">
+
+            </TextView>
+
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/small_padding"
+        android:paddingRight="@dimen/small_padding"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/nicknameButton"
+            android:textAlignment="textStart"
+            android:drawableTint="@color/white"
+            android:drawableEnd="@drawable/ic_edit"
+            android:layout_height="60dp"
+            android:text="@string/modifica_nickname">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/tutorialButton"
+            android:layout_height="60dp"
+            android:drawableEnd="@drawable/ic_manual"
+            android:drawableTint="@color/white"
+            android:text="@string/rivedi_tutorial">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/riattivaIstruzioni"
+            android:layout_height="60dp"
+            android:drawableTint="@color/white"
+            android:text="@string/riattiva_istruzioni">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/informazioniButton"
+            android:layout_height="60dp"
+            android:drawableEnd="@drawable/ic_info_2"
+            android:drawableTint="@color/white"
+            android:text="@string/info_title">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/changePassword"
+            android:layout_height="60dp"
+            android:drawableTint="@color/white"
+            android:text="@string/change_password">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/openPrivacy"
+            android:layout_height="60dp"
+            android:drawableTint="@color/white"
+            android:text="Visualizza Privacy">
+        </Button>
+
+        <Button
+            android:layout_marginTop="@dimen/small_margin"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/deleteAccount"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/red"
+            android:drawableEnd="@android:drawable/ic_delete"
+            android:drawableTint="@color/white"
+            android:text="@string/delete_account">
+        </Button>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/small_margin"
+            android:id="@+id/homeListViewLayout"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mechanic">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/def_margin">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/red"
+                android:id="@+id/logoutButton"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/logout">
+            </Button>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

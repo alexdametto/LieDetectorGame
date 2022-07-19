@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#028dc4</color>
+    <color name="colorPrimaryDark">#009DDC</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="darkBackground">#263238</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/white</color>
+
+    <color name="mainColor">#1446A0</color>
+
+    <color name="buttonsColor">#40798C</color>
+    <color name="disabledButton">#757575</color>
+
+    <color name="defaultGameBlockColor">#757575</color>
+
+    <color name="yellow">#FFB300</color>
+
+    <color name="yourTurn">#FFB300</color>
+    <color name="turnWaiting">#757575</color>
+
+
+    <color name="otherTurn">#E65100</color>
+    <color name="opinionColor">#E65100</color>
+
+    <color name="tie">#FF8F00</color>
+
+    <color name="green">#43A047</color>
+    <color name="red">#DB3A34</color>
+
+    <color name="errorColor">#EF5350</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+
+    <color name="gameTurn">#FF8F00</color>
+    <color name="gameWaiting">#757575</color>
+    <color name="gameCompleted">#757575</color>
+</resources>

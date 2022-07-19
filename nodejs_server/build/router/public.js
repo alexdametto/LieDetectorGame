@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+var express = require("express");
+var router = express.Router();
+exports.router = router;
+var _a = require("../services/public"), loadImage = _a.loadImage, emailAlreadyUsed = _a.emailAlreadyUsed, getConsent = _a.getConsent, getPrivacy = _a.getPrivacy;
+router.get("/consent", getConsent);
+router.get("/privacy", getPrivacy);
+router.get("/:image_id", loadImage);
+router.post("/emailAlreadyUsed", emailAlreadyUsed);

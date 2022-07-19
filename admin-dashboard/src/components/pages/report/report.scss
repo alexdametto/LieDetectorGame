@@ -1,0 +1,32 @@
+.report-info-page {
+    .report-info {
+        padding: 10px;
+
+        .reporter {
+            margin-top: 10px;
+        }
+    
+        .reported {
+            margin-top: 10px;
+        }
+    
+        .reason {
+            margin-top: 10px;
+        }
+        
+        .description {
+            margin-top: 10px;
+        }
+    }
+
+    
+    .punteggio-container {
+        .first-player, .second-player {
+            width: 45%;
+        }
+
+        .mid-container {
+            width: 10%;
+        }
+    }
+}

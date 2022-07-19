@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold|italic"
+        android:fontFamily="@font/aldrich"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="45">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="10"
+                    android:background="#263238"
+                    android:padding="@dimen/small_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:textAllCaps="true"
+                        android:text="@string/create_new_account"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/def_margin"
+                        android:textSize="@dimen/big_text_size"
+                        android:layout_marginBottom="@dimen/small_margin">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/emailLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/DefaultTextLayout"
+                            android:hint="@string/email_address"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/emailTextField"
+                                android:fontFamily="@font/aldrich"
+                                android:layout_width="match_parent"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passwordLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/DefaultTextLayout"
+                            android:hint="@string/password"
+                            app:errorIconDrawable="@null"
+                            app:endIconMode="password_toggle"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passwordTextField"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/aldrich"
+                                android:textColor="@color/white"
+                                android:inputType="textPassword"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/confirmPasswordLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/DefaultTextLayout"
+                            android:hint="@string/confirm_password"
+                            app:errorIconDrawable="@null"
+                            app:endIconMode="password_toggle"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/confirmPasswordTextField"
+                                android:textColor="@color/white"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/aldrich"
+                                android:inputType="textPassword"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginTop="@dimen/def_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:backgroundTint="@color/green"
+                        android:id="@+id/createAccount"
+                        android:text="@string/create_account">
+
+                    </Button>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="45"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

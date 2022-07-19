@@ -1,0 +1,18 @@
+.consent-text-container {
+    padding: 50px;
+
+    .title-container {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .text-field-input-container {
+        margin-top: 20px;
+    }
+
+    .action-button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}

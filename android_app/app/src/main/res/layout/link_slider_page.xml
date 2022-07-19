@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingTop="10dp"
+    android:paddingBottom="80dp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/AppIntroDefaultHeading"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/aldrich"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlePolicy"
+        android:text="@string/titolo_policy" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AppIntroDefaultText"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:id="@+id/descriptionPolicy"
+                android:text="@string/description_policy" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:checkedButton="@+id/radioConsent"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radioAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
+                    android:text="@string/radio_accept"/>
+                <RadioButton
+                    android:id="@+id/radioReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
+                    android:text="@string/radio_reject"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

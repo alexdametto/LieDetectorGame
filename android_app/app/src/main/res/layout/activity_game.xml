@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".GameActivity">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:elevation="5.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:layout_weight="0"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/aldrich"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="8"
+                    android:id="@+id/titleActivity"
+                    android:textSize="20dp"
+                    android:text="@string/stato_partita">
+                </TextView>
+
+                <Button
+                    android:id="@+id/reportButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/red"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/alert"
+                    app:iconGravity="textStart"
+                    app:iconTint="@null"
+                    app:iconPadding="0dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/surrenderButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/red"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/ic_flags"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/nicknamePlayer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/black_ops_one"
+                        android:shadowColor="@color/black"
+                        android:textAlignment="center"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Player1"
+                        android:textSize="20dp"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/punteggioPlayer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:text="0"
+                        android:textSize="30dp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:text=" - "
+                        android:textSize="30dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/punteggioPlayer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:text="0"
+                        android:textSize="30dp"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/nicknamePlayer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/black_ops_one"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:textAlignment="center"
+                        android:text="@string/avversario_casuale"
+                        android:textSize="20dp">
+
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+
+    <!-- GIOCO -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/pullToRefresh"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <!-- Layout righe gioco -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/small_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/aldrich"
+                            android:text="Round 1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/medium_text_size">
+
+                        </TextView>
+
+                        <RelativeLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/p_bar_1"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingTop="@dimen/p_bar_padding"
+                                android:paddingBottom="@dimen/p_bar_padding"
+                                android:progressDrawable="@drawable/h_prog_bar_default"
+                                android:progress="0"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_1_punteggio_1"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textSize="35dp"
+                                    android:textAlignment="textEnd">
+
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.5"
+                                    android:id="@+id/text_r_1"
+                                    android:fontFamily="@font/aldrich"
+                                    android:textSize="20dp"
+                                    android:text="..."
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textAlignment="center">
+
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_1_punteggio_2"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:textSize="35dp"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textAlignment="textStart">
+
+                                </TextView>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/small_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/aldrich"
+                            android:text="Round 2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/medium_text_size">
+
+                        </TextView>
+
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/p_bar_2"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:paddingTop="@dimen/p_bar_padding"
+                                android:paddingBottom="@dimen/p_bar_padding"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/h_prog_bar_default" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_2_punteggio_1"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textSize="35dp"
+                                    android:textAlignment="textEnd">
+
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.5"
+                                    android:id="@+id/text_r_2"
+                                    android:fontFamily="@font/aldrich"
+                                    android:textSize="20dp"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:text="..."
+                                    android:shadowRadius="8"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textAlignment="center">
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_2_punteggio_2"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textSize="35dp"
+                                    android:textAlignment="textStart">
+
+                                </TextView>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/small_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/aldrich"
+                            android:text="Round 3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/medium_text_size">
+
+                        </TextView>
+
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/p_bar_3"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:progressDrawable="@drawable/h_prog_bar_default"
+                                android:paddingTop="@dimen/p_bar_padding"
+                                android:paddingBottom="@dimen/p_bar_padding"
+                                android:progress="100" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_3_punteggio_1"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textSize="35dp"
+                                    android:textAlignment="textEnd">
+
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.5"
+                                    android:id="@+id/text_r_3"
+                                    android:fontFamily="@font/aldrich"
+                                    android:textSize="20dp"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:text="..."
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textAlignment="center">
+
+                                </TextView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/r_3_punteggio_2"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="8"
+                                    android:textAlignment="textStart"
+                                    android:fontFamily="@font/black_ops_one"
+                                    android:textSize="35dp">
+
+                                </TextView>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Fine layout righe gioco -->
+
+            </LinearLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="center_horizontal">
+
+            <android.widget.Button
+                android:layout_width="200dp"
+                android:layout_height="65dp"
+                android:background="@drawable/glow_button"
+                android:backgroundTint="@null"
+                android:text="@string/gioca"
+                android:shadowColor="@color/black"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:fontFamily="@font/aldrich"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/buttonGioca"
+                android:textColor="@color/white"/>
+
+            <android.widget.Button
+                android:layout_width="200dp"
+                android:layout_height="65dp"
+                android:background="@drawable/glow_button"
+                android:backgroundTint="@color/disabledButton"
+                android:text="@string/gioca"
+                android:shadowColor="@color/black"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:fontFamily="@font/aldrich"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:textSize="20dp"
+                android:id="@+id/disabledButtonGioca"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

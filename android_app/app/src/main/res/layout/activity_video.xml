@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityVideo"
+    android:background="@color/mainColor"
+    android:orientation="vertical">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:elevation="5.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:layout_weight="0"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/titleActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textSize="@dimen/big_text_size"
+                    android:fontFamily="@font/aldrich"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:text="@string/descrivi_immagine_a">
+
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="invisible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/playerNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="25dp"
+                android:fontFamily="@font/black_ops_one"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:shadowColor="@color/black"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:text="Nickname">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:textSize="18dp"
+            android:gravity="left|center_vertical"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/smallDescription"
+            android:text="@string/small_description_video">
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/infoButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:cornerRadius="1000dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/white"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_info"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:iconPadding="0dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/small_margin"
+        android:id="@+id/homeListViewLayout"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/answer">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/skipCheckbox"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="@string/skip_checkbox"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/def_margin">
+
+        <android.widget.Button
+            android:layout_marginBottom="@dimen/def_margin"
+            android:id="@+id/buttonAnswer"
+            android:background="@drawable/glow_button"
+            android:layout_width="250dp"
+            android:layout_height="65dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/registra_video">
+        </android.widget.Button>
+
+    </LinearLayout>
+
+</LinearLayout>

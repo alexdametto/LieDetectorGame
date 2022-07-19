@@ -1,0 +1,216 @@
+$primary-color:#1976D2;
+$secondary-color: #3F51B5;
+$mainColor: #303030;
+$errorColor: rgb(244, 67, 54);
+
+.cella-stato {
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 5px;
+    }
+}
+
+.top-header {
+    position: relative;
+
+    .top-header-thumb {
+        background: repeating-linear-gradient(transparent 0%,transparent 25%,$primary-color 25%,$primary-color  37.5%),
+                    linear-gradient(#24a5f9,$secondary-color),
+                    linear-gradient(105deg,transparent 0%,transparent 50%,#b4cad9 50%,$primary-color 100%);
+        background-blend-mode: multiply;
+        height: 300px;
+        border-top: 2px solid $secondary-color;
+    }
+    
+    .top-header-author {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        top: 170px;
+        text-align: center;
+        width: 100%;
+        z-index: 4;
+    
+        .author-thumb {
+            border-radius: 100%;
+            border: 6px solid $primary-color;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 132px;
+            height: 132px;
+            background-color: $primary-color;
+
+            img {
+                background-size: contain;
+                background-position: center;
+                height: 100%;
+            }
+        }
+    
+        .author-content {
+            .author-name {
+                margin-top: 10px;
+                font-size: 25px;
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+.profile-info-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    .tab-container {
+        width: 50%;
+    }
+}
+
+.info-player-container {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    .single-info-container {
+
+        &.ban {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            button {
+                width: 100%;
+                &:not(:first-child) {
+                    margin-top: 5px;
+                }
+            }
+        }
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.container-partite {
+    .single-game-container {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px 0px 10px 0px;
+
+        &.stato-win {
+            background-color: #A5D6A7;
+        }
+
+        &.stato-lose {
+            background-color: #EF9A9A;
+        }
+
+        .status-container {
+            padding: 0 10px 0 10px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .punteggio-container {
+            display: flex;
+
+            .first-player, .second-player, .mid-container{
+                font-size: 25px;
+            }
+
+            .first-player, .second-player {
+                width: 40%;
+            }
+
+            .mid-container {
+                width: 20%;
+            }
+
+            .first-player {
+                text-align: right;
+            }
+            .second-player {
+                text-align: left;
+            }
+            .mid-container {
+                text-align: center;
+            }
+        }
+
+        .nickname-container {
+            display: flex;
+            margin-top: 10px;
+
+            .first-player, .second-player, .mid-container{
+                font-size: 25px;
+            }
+            
+            .first-player, .second-player {
+                width: 45%
+            }
+
+            .mid-container {
+                width: 10%;
+                visibility: hidden;
+            }
+
+            .first-player {
+                text-align: right;
+            }
+            .second-player {
+                text-align: left;
+            }
+            .mid-container {
+                text-align: center;
+            }
+        }
+
+        .pulsante-info-game {
+            margin-top: 10px;
+            padding: 0 10px 0 10px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container-report-fatti, .container-report-ricevuti {
+    .single-report-container {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .reporter {
+            margin-top: 10px;
+        }
+    
+        .reported {
+            margin-top: 10px;
+        }
+    
+        .reason {
+            margin-top: 10px;
+        }
+        
+        .description {
+            margin-top: 10px;
+        }
+
+        .pulsante-info-report {
+            margin-top: 10px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

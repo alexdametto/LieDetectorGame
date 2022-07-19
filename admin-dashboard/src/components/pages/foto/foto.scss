@@ -1,0 +1,48 @@
+@import "/src/generic.scss";
+
+.input-container {
+    margin-top: 10px;
+}
+
+thead, tbody, tr, td {
+    width: 100%;
+}
+
+.riga-img {
+    img {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+.modal-insert-images {
+    .modal-description {
+        margin-top: 10px;
+    }
+
+    .input-container {
+        margin-top: 20px;
+    }
+
+    .action-button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        
+        button {
+            margin-left: 10px;
+        }
+    }
+
+    .slider-container {
+        padding: 0px 10px;
+        display: flex;
+        span.minValue {
+            margin-right: 20px;
+        }
+
+        span.maxValue {
+            margin-left: 20px;
+        }
+    }
+}

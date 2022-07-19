@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInfoActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/mainColor">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:elevation="5.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="invisible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:id="@+id/back_button"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/playerNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="25dp"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:shadowColor="@color/black"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:text="@string/info_dare_piu_informazioni">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/smallDescription"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/aldrich"
+            android:gravity="left|center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="@string/small_description_nickname"
+            android:textSize="18dp"></TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/infoButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:cornerRadius="1000dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/white"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_info"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:iconPadding="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nicknameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DefaultTextLayout"
+            android:hint="@string/nickname"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nicknameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/homeListViewLayout"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/sexAssigned">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/spinner_gb"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/spinnerSex"
+                    android:backgroundTint="@color/white"
+                    android:layout_height="50dp">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DefaultTextLayout"
+                android:hint="@string/Age"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ageTextField"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/aldrich"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/degreeObtained">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/spinner_gb"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/spinnerDegree"
+                    android:backgroundTint="@color/white"
+                    android:layout_height="50dp">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <android.widget.Button
+            android:layout_marginBottom="@dimen/def_margin"
+            android:id="@+id/nicknameButton"
+            android:layout_width="250dp"
+            android:layout_height="65dp"
+            android:background="@drawable/glow_button"
+            android:shadowColor="@color/black"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:textSize="@dimen/medium_text_size"
+            android:text="@string/confirm">
+        </android.widget.Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

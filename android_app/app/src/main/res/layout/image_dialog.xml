@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#263238">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/chiudiButton">
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/imageView"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+    </ImageView>
+
+</LinearLayout>

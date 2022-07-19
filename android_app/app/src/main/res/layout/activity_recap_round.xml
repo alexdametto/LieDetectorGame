@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecapRoundActivity"
+    android:background="@color/mainColor">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:elevation="5.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:layout_weight="0"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/titleActivity"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/aldrich"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:text="@string/subround_title">
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="invisible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/back"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/playerNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="25dp"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:shadowColor="@color/black"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:text="Nickname">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/def_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/subRound1Alternative">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/aldrich"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/black"
+                    android:id="@+id/nick_no_send_1"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="8"
+                    android:text="Nickname">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/non_inviato_video">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/aldrich"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/black"
+                    android:id="@+id/nick_no_send_point_1"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="8"
+                    android:text="Nickname">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/guadagnato_punto">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/subRound1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_img_1"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/describe_image">
+                    </TextView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:id="@+id/immagine1"
+                    android:background="@color/darkBackground"
+                    android:textAlignment="center"
+                    android:text="VISUALIZZA IMMAGINE"
+                    android:layout_marginTop="@dimen/small_margin">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_video_1"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/registrato_video">
+                    </TextView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:id="@+id/video1"
+                    android:background="@color/darkBackground"
+                    android:textAlignment="center"
+                    android:text="VISUALIZZA VIDEO"
+                    android:layout_marginTop="@dimen/small_margin">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_answer_1"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/answer_1"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/indicato_bugia">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_opinion_1"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/opinion_1"
+                        android:textSize="18dp"
+                        android:text="@string/indovinato">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_point_1"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/point_1"
+                        android:text="@string/guadagnato_punto">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="@dimen/def_margin"
+                android:layout_marginBottom="@dimen/def_margin"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/subRound2Alternative">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_no_send_2"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/non_inviato_video">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_no_send_point_2"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/guadagnato_punto">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/subRound2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_img_2"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/describe_image">
+                    </TextView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:id="@+id/immagine2"
+                    android:background="@color/darkBackground"
+                    android:textAlignment="center"
+                    android:text="VISUALIZZA IMMAGINE"
+                    android:layout_marginTop="@dimen/small_margin">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:id="@+id/nick_video_2"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/registrato_video">
+                    </TextView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:id="@+id/video2"
+                    android:background="@color/darkBackground"
+                    android:textAlignment="center"
+                    android:text="VISUALIZZA VIDEO"
+                    android:layout_marginTop="@dimen/small_margin">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_answer_2"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/answer_2"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/indicato_verita">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_opinion_2"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/opinion_2"
+                        android:textSize="18dp"
+                        android:text="@string/non_indovinato">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/nick_point_2"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="8"
+                        android:text="Nickname">
+
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aldrich"
+                        android:id="@+id/point_2"
+                        android:text="@string/guadagnato_punto">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#263238">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reportButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/red"
+            app:icon="@drawable/alert"
+            app:iconGravity="textStart"
+            android:layout_toLeftOf="@id/chiudiButton"
+            android:layout_marginRight="10dp"
+            app:iconPadding="0dp"
+            app:iconTint="@null" />
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/chiudiButton">
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/videoViewDialog"
+        android:background="@color/black"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        app:controller_layout_id="@layout/custom_exo_controller"
+        app:show_buffering="true"
+        android:layout_width="fill_parent">
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+</LinearLayout>

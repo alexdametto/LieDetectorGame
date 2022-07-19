@@ -1,0 +1,33 @@
+TODO completati:
+- [APP ANDROID e BE] Rimuovere "recupera password" da BE e app android
+- [APP ANDROID, DASHBOARD e BE] Testo di termine e condizioni a BE e ottenerlo tramite GET. Aggiungere possibilità di modificare il testo da DASHBOARD
+- [APP ANDROID] Rimuovere "cancellazione account" da settings
+- [APP ANDROID e BE] Togliere controlli su password, controllare solo che sia almeno 1 carattere e max 10
+- [DASHBOARD ADMIN e BE] Permettere cambio psw da dashboard
+- [DASHBOARD ADMIN e BE] Implementare in dashboard modifica e cancellazione dati utente
+- [DASHBOARD ADMIN e BE] Da dashboard rendere admin o togliere privilegi admin un utente
+- [DASHBOARD ADMIN] Implementare RICERCA UTENTE in dashboard admin
+- [ALTRO DA FARE] Scrivere README dettagliato (farlo da linux così da fare tutorial completo)
+- [DASHBOARD ADMIN] Aggiungere caricamento multiplo delle immagini
+- [DASHBOARD ADMIN] Cancellazione multipla immagini
+- [DASHBOARD ADMIN] Controllare login, dare errore diverso quando psw sbagliata (da controllare script export)
+- [DASHBOARD ADMIN] Controllare login, togliere sempre spazi
+- [ANDROID APP] Controllare rimozione spazi da login
+- [ANDROID APP] Cambiare testo info app, aggiungere che di ricerca + email prof. Navarin
+- [ANDROID APP] Cambiare "SI" e "NO" in "CONFERMA" e "SEGNALA"
+- [ANDROID APP] Cambiare messaggio "ha descritto correttamente l'immagine?" in  (VERITA) "confermi che la descrizione corrisponde all'immagine?" in (BUGIA) "confermi che la descrizione <b>NON</b> corrisponde all'immagine?" --> mettere modale su "NO" (cambiare in "SEGNALA") che spieghi cosa succede
+- [ANDROID APP] Se premo "SI" o "NO" prima che finisca il video, l'audio continua ad andare
+- [ANDROID APP] Controllare input età
+- [DASHBOARD e APP] Aggiungere classifica Round Vinti (punteggio complessivo) al posto di "PER PARTITE GIOCATE" (dashboard e app)
+- [DASHBOARD ADMIN] Aggiungere complessità immagini
+- [DASHBOARD ADMIN e ANDROID APP] Aggiungere testo privacy da dashboard su file + get su app android
+- [ANDROID APP] Diminuire font size quando "CONFERMA" va su due righe
+- [ANDROID APP] Controllare socket richiesta gioco
+- [ANDROID APP] Modale report visualizzazione video -> si chiude e torna in home??? Non succede
+- [ANDROID APP] Modale report visualizzazione video -> mettere SEGNALA (in rosso) e ANNULLA (in blu)
+- [DASHBOARD ADMIN] Disabilitare "Elimina tutte le immagini" se non ce ne sono
+- [DASHBOARD ADMIN] Dashboard, togliere autoplay video + sistemare vincitore
+- [DASHBOARD ADMIN] Dashboard, pareggio viene segnato come sconfitta
+- [ANDROID APP, BE e DASHBOARD] Nickname univoco dopo registrazione e dalle impostazioni e anche su dashboard
+
+TODO:

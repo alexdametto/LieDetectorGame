@@ -1,0 +1,28 @@
+@import "/src/vars.scss";
+
+
+@media screen and (min-width: $min-desktop) {
+    .drawer-container, .drawer-open-button {
+        display: none!important
+    }
+}
+
+a.homelink {
+    color: white
+}
+
+.app-name {
+    min-width: 150px;
+}
+.links-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        color: white
+    }
+}

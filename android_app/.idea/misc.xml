@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/drawable/background_button.xml" value="0.182" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_camera.xml" value="0.2667572463768116" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_change_password.xml" value="0.2667572463768116" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_game.xml" value="0.2667572463768116" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_intro.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_leaderboard.xml" value="0.5" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_login.xml" value="0.75" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_main.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_nickname.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_opinion.xml" value="0.22" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_opinion_info.xml" value="0.5" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_recap_round.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_recap_single_round.xml" value="0.5" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_recover_password.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_registration.xml" value="0.3625" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_report.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_select_player.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_settings.xml" value="0.3625" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_slider_consent.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_small_consent.xml" value="0.34584450402144773" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_splash_screen.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_start_game.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_user_info.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/activity_video.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/custom_exo_controller.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/fine_partita.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/finished_game_item.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/game_item.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/game_request_item.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/image_dialog.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/info_dialog.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/info_dialog_yes_no.xml" value="0.2203125" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/leaderboard_item.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/link_slider_page.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/player_item.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/report_video_dialog.xml" value="0.67" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/video_dialog.xml" value="0.5843253968253969" />
+        <entry key="..\:/REPOSITORIES/LieDetectorGameV2/android_app/app/src/main/res/layout/video_dialog_without_buttons.xml" value="0.5843253968253969" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

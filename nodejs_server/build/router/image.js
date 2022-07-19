@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+var auth_1 = require("../services/auth");
+var express = require("express");
+var router = express.Router();
+exports.router = router;
+var _a = require("../services/image"), uploadImage = _a.uploadImage, uploadImageMultiple = _a.uploadImageMultiple, getImages = _a.getImages, deleteImage = _a.deleteImage, deleteAllimages = _a.deleteAllimages, getRandomImage = _a.getRandomImage;
+var UploadUtils = require("../uploadUtils").UploadUtils;
+router.post("/multiUploadImage/:complexity", auth_1.isAdmin(), UploadUtils.getUpload().array("upload"), uploadImageMultiple);
+router.post("/uploadImage", auth_1.isAdmin(), UploadUtils.getUpload().single("upload"), uploadImage);
+router.get("/images", getImages);
+router.delete("/all", auth_1.isAdmin(), deleteAllimages);
+router.delete("/:image_id", auth_1.isAdmin(), deleteImage);
+router.get("/random", getRandomImage);

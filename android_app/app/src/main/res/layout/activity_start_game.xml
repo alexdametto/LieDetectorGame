@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartGameActivity"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:background="@color/mainColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:layout_weight="0"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/back"
+                app:iconGravity="textStart"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/colorPrimary"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="@dimen/big_text_size"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:shadowColor="@color/black"
+                android:text="@string/nuova_partita"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8">
+
+            </TextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="invisible"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:layout_weight="0"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/back"
+                app:iconGravity="textStart"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/colorPrimary"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/small_margin">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:ellipsize="end"
+            android:textSize="18dp"
+            android:fontFamily="@font/aldrich"
+            android:id="@+id/smallDescriptionNewMatch"
+            android:text="Descrizione inizia partita">
+        </TextView>
+
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@drawable/glow_button"
+            android:backgroundTint="@null"
+            android:text="@string/avversario_casuale"
+            android:shadowColor="@color/black"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:fontFamily="@font/aldrich"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/newMatchButton"
+            android:textColor="@color/white"/>
+
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@drawable/glow_button"
+            android:backgroundTint="@null"
+            android:text="@string/ScegliGiocatore"
+            android:shadowColor="@color/black"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:fontFamily="@font/aldrich"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/selectPlayerMatch"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/aldrich"
+                android:id="@+id/RichiesteGame"
+                android:text="@string/lista_richieste">
+            </TextView>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:id="@+id/pullToRefresh"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:id="@+id/gameRequests">
+                </ListView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

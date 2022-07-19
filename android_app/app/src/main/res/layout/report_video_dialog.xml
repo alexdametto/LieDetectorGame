@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/report_video"
+            android:textSize="28dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/motivazione">
+        </TextView>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spinnerMotivazione"
+            android:backgroundTint="@color/white"
+            android:layout_height="40dp">
+        </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/noButton"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/red"
+                android:text="@string/annulla"
+                android:textColor="#FFF" />
+
+            <android.widget.Button
+                android:id="@+id/yesButton"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/green"
+                android:text="@string/confirm"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

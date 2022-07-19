@@ -1,0 +1,17 @@
+.container-game {
+    padding: 10px 100px;
+
+    .punteggio-container {
+        .first-player, .second-player {
+            width: 45%;
+        }
+
+        .mid-container {
+            width: 10%;
+        }
+    }
+
+    video {
+        height: 400px;
+    }
+}
